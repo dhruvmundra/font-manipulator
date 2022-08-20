@@ -27,8 +27,11 @@ function draw(){
 function gotPoses(results){
     console.log(results);
     if(results.length>0){
-        leftwristX=results[0].pose.leftWrist.X
-        rightwristX=results[0].pose.rightWrist.X
-        difference=floor(rightwristX-leftwristX)
+        console.log("inside the got poses")
+        leftwristX=results[0].pose.leftWrist.x
+        rightwristX=results[0].pose.rightWrist.x
+        console.log("leftwristX"+leftwristX+" rightwristX"+rightwristX)
+        difference=floor(leftwristX-rightwristX)
+        console.log("diffeence=",difference)
     }
 }
